@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madlibs</title>
+</head>
+<body>
+    <h1>Madlibs</h1>
+    <form action="story" method="POST" id="madlibs">
+    {% for field in fields %}
+        <div class="input-container">
+            <label for="{{ field }}">{{ field }}</label>
+            <input type="text" id="{{field}}" name="{{field}}" placeholder="{{field}}"/> 
+        </div>
+    {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
